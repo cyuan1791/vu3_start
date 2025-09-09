@@ -2,7 +2,11 @@ import "./assets/main.css";
 
 import { createApp } from "vue";
 import App from "./App.vue";
-import { createMemoryHistory, createRouter } from "vue-router";
+import {
+  createMemoryHistory,
+  createRouter,
+  createWebHistory,
+} from "vue-router";
 
 import HomeView from "./components/HomeView.vue";
 import AboutView from "./components/AboutView.vue";
@@ -13,7 +17,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes,
 });
 
